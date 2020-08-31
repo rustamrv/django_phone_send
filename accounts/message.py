@@ -7,7 +7,7 @@ def send_message(to, body):
         'Content-Type': 'application/xml; charset=utf-8',
         'Authorization': 'Bearer ' + getattr(settings, 'SENDSMS_AUTH_TOKEN')
     }
-    # response = requests.post("https://gate.smsclub.mobi/xml/", headers=headers, data=text_xml) 
+    response = requests.post("https://gate.smsclub.mobi/xml/", headers=headers, data=text_xml) 
 
 
 def xml_gen(to, body):
